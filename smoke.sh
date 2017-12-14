@@ -27,13 +27,13 @@ else
 	exit 1
 fi
 
-echo Check Kibana
-nc -vz 172.16.0.1 5601
+echo Check Logstash
+nc -vz 172.16.0.1 5000
 if [ $? == 0 ];then
 	echo 
 	echo OK
 else
 	echo
-	echo Fail in Kibana
+	echo Fail in Logstash
 	exit 1
 fi
